@@ -134,7 +134,6 @@ void Factorial(){
 //        cout << "Average = " << avg;
 //}
 int main() {
-    cout << "Hello my friend :)"<<endl;
     char oprt;
     string no = "N";
     string ans;
