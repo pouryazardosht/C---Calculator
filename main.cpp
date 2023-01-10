@@ -112,27 +112,27 @@ void Factorial(){
         }
         cout<<"Factorial: "<<fact;
 }
-void Average(){
-    cout<<"You Choose [a]"<<endl;
-    int n;
-    float num[100], sum=0, avg;
-    cout << "Enter count of numbers: ";
-    cin >> n;
-    while (n > 100 || n <= 0)
-    {
-        cout << "Error! number should in range of (1 to 100)." << endl;
-        cout << "Enter the number again: ";
-        cin >> n;
-    }
-        for(int i = 0; i < n; ++i)
-        {
-            cout << i + 1 << ". Enter number: ";
-            cin >> num[i];
-            sum += num[i];
-        }
-        avg = sum / n;
-        cout << "Average = " << avg;
-}
+//void Average(){
+//    cout<<"You Choose [a]"<<endl;
+//    int n;
+//    float num[100], sum=0, avg;
+//    cout << "Enter count of numbers: ";
+//    cin >> n;
+//    while (n > 100 || n <= 0)
+//    {
+//        cout << "Error! number should in range of (1 to 100)." << endl;
+//        cout << "Enter the number again: ";
+//        cin >> n;
+//    }
+//        for(int i = 0; i < n; ++i)
+//        {
+//            cout << i + 1 << ". Enter number: ";
+//            cin >> num[i];
+//            sum += num[i];
+//        }
+//        avg = sum / n;
+//        cout << "Average = " << avg;
+//}
 int main() {
     char oprt;
     string no = "N";
@@ -181,9 +181,9 @@ int main() {
             case 'f':
                 Factorial();
                 break;
-            case 'a':
-                Average();
-                break;
+//            case 'a':
+//                Average();
+//                break;
         }
         
         cout<<endl<<"New task? (Y & N)"<<endl;
