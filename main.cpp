@@ -185,6 +185,9 @@ int main() {
 //            case 'a':
 //                Average();
 //                break;
+            default:
+                cout << "You Choose Wrong" <<endl;
+                break;
         }
         
         cout<<endl<<"New task? (Y & N)"<<endl;
