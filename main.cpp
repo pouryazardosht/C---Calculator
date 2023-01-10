@@ -10,7 +10,7 @@ using namespace std;
 
 void Menu(){
     cout<<"Operators"<<endl<<endl;
-    cout <<"1  :  [+]" <<endl << "2  :  [-]" <<endl << "3  :  [/]" <<endl << "4  :  [%]" << endl<<"5  :  [*]" << endl<<"6  :  [S]" << endl<<"7  :  [$]" << endl<<"8  :  [e]" << endl<<"9  :  [#]" << endl<<"10 :  [p]" << endl<<"11 :  [l]" << endl<<"12 :  [f]" << endl<<"13 :  [v]" << endl<<"14 :  [^]" << endl<<"15 :  [<]"<< endl<<"16 :  [a]" <<endl<<"17 :  [M]" <<endl<<"18 :  [G]" <<endl;
+    cout <<"[+]" <<endl << "[-]" <<endl << "[/]" <<endl << "[%]" << endl<<"[*]" << endl<<"[S]" << endl<<"[$]" << endl<<"[e]" << endl<<"[#]" << endl<<"[p]" << endl<<"[l]" << endl<<"[f]" << endl<<"[v]" << endl<<"[^]" << endl<<"[<]"<< endl<<"[a]" <<endl<<"[M]" <<endl<<"[G]" <<endl;
     cout<< endl <<"Choose: ";
 }
 void Sum(){
@@ -134,7 +134,7 @@ void Average(){
         cout << "Average = " << avg;
 }
 int main() {
-    int oprt;
+    char oprt;
     string no = "N";
     string ans;
     while (1) {
@@ -142,46 +142,46 @@ int main() {
         cin >> oprt;
         cout<<endl;
         switch (oprt) {
-            case 1:
+            case '+':
                 Sum();
                 break;
                 
-            case 2:
+            case '-':
                 Minus();
                 break;
                 
-            case 3:
+            case '/':
                 Division();
                 break;
-            case 4:
+            case '%':
                 Remain();
                 break;
                 
-            case 5:
+            case '*':
                 Multipli();
                 break;
-            case 6:
+            case 'S':
                 Square();
                 break;
-            case 7:
+            case '$':
                 Sinus();
                 break;
-            case 8:
+            case 'e':
                 Exponential();
                 break;
-            case 9:
+            case '#':
                 Cosine();
                 break;
-            case 10:
+            case 'p':
                 Power();
                 break;
-            case 11:
+            case 'l':
                 Logarithm();
                 break;
-            case 12:
+            case 'f':
                 Factorial();
                 break;
-            case 16:
+            case 'a':
                 Average();
                 break;
         }
