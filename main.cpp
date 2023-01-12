@@ -135,8 +135,7 @@ void Factorial(){
 //}
 int main() {
     char oprt;
-    string no = "N";
-    string ans;
+    char ans;
     while (1) {
         Menu();
         cin >> oprt;
@@ -191,8 +190,14 @@ int main() {
         
         cout<<endl<<"New task? (Y & N)"<<endl;
         cin >> ans;
-        if (ans==no) {
-            break;;
+        if (ans=='N') {
+            break;
+        }
+        else if (ans=='Y') {
+            continue;
+        }
+        else{
+            cout<<"you choose wrong"<<endl;
         }
     }
     return 0;
