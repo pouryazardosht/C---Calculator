@@ -112,6 +112,33 @@ void Factorial(){
         }
         cout<<"Factorial: "<<fact;
 }
+void Variance(){
+    cout <<"You Choose [v]"<<endl;
+    int n;
+    float avg,sum = 0,t,var;
+    cout <<"Enter num count: "<<endl;
+    cin>>n;
+    int a[n];
+    for(int i = 0; i < n; i++){
+        cout <<"Enter num: ";
+        cin>>a[i];
+        sum +=a[i];
+    }
+    avg = sum/n;
+    sum = 0.0;
+    
+    for(int i =0 ; i<n ; i++){
+        t=a[i]-avg;
+        t=pow(t,2);
+        sum=sum+t;
+    }
+    var=sum/n;
+    cout<<endl<<"Varianc is : "<<var<<endl;
+    
+}
+
+
+
 //void Average(){
 //    cout<<"You Choose [a]"<<endl;
 //    int n;
@@ -179,6 +206,9 @@ int main() {
                 break;
             case 'f':
                 Factorial();
+                break;
+            case 'v':
+                Variance();
                 break;
 //            case 'a':
 //                Average();
