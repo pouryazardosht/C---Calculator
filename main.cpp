@@ -133,7 +133,7 @@ void Variance(){
         sum=sum+t;
     }
     var=sum/n;
-    cout<<endl<<"Varianc is : "<<var<<endl;
+    cout<<endl<<"Variance is : "<<var<<endl;
     
 }
 
