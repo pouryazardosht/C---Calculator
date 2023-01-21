@@ -6,6 +6,7 @@
 //
 #include <iostream>
 #include <math.h>
+#include <iomanip>
 using namespace std;
 
 void Menu(){
@@ -151,6 +152,52 @@ void Variance(){
     
 }
 //--------------------------------------------
+void upMatrix(){
+    cout<<"You Choose [^]"<<endl;
+    int i,j;
+    int a[10][10];
+    for(i =0;i<10;i++){
+        for(j=0;j<10;j++){
+            if (i<=j) {
+                a[i][j]=1;
+            }
+            else{
+                a[i][j]=0;
+            }
+        }
+    }
+    cout <<"array : \n";
+    for(i=0;i<10;i++){
+        for(j=0;j<10;j++){
+            cout<<setw(5)<<a[i][j];
+        }
+        cout<<endl;
+    }
+}
+//--------------------------------------------
+void downMatrix(){
+    cout<<"You Choose [<]"<<endl;
+    int i,j;
+    int a[10][10];
+    for(i =0;i<10;i++){
+        for(j=0;j<10;j++){
+            if (i>=j) {
+                a[i][j]=1;
+            }
+            else{
+                a[i][j]=0;
+            }
+        }
+    }
+    cout <<"array : \n";
+    for(i=0;i<10;i++){
+        for(j=0;j<10;j++){
+            cout<<setw(5)<<a[i][j];
+        }
+        cout<<endl;
+    }
+}
+//--------------------------------------------
 void Average(){
     cout<<"You Choose [a]"<<endl;
     int n;
@@ -236,6 +283,12 @@ int main() {
                 break;
             case 'M':
                 mathGame();
+                break;
+            case '^':
+                upMatrix();
+                break;
+            case '<':
+                downMatrix();
                 break;
             default:
                 cout << "You Choose Wrong" <<endl;
