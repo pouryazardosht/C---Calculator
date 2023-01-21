@@ -1,9 +1,4 @@
-//
-//  main.cpp
 //  Term1 proj
-//
-//  Created by Pourya Zardosht on 10/13/1401 AP.
-//
 #include <iostream>
 #include <math.h>
 #include <iomanip>
@@ -228,6 +223,86 @@ void mathGame(){
     }
 }
 //--------------------------------------------
+void Shape(){
+    int shNum;
+    cout<<"Enter num(1-6) : ";
+    cin>>shNum;
+    cout<<"You Choose [G]"<<endl;
+    switch (shNum) {
+        case 1:
+            cout<<"⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️⬛️◻️⬛️◻️⬛️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️⬛️⬛️◻️⬛️⬛️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️⬛️◻️⬛️◻️⬛️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️⬛️⬛️◻️⬛️⬛️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️⬛️⬛️◻️⬛️⬛️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️◻️◻️◻️◻️◻️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️⬛️◻️◻️◻️⬛️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️⬛️◻️◻️◻️⬛️⬛️⬛️"<<endl;
+            break;
+        case 2:
+            cout<<"⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️◻️◻️⬛️◻️◻️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️◻️◻️⬛️◻️◻️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️"<<endl;
+            cout<<"⬛️◻️◻️⬛️⬛️⬛️◻️◻️⬛️"<<endl;
+            cout<<"⬛️⬛️◻️⬛️⬛️⬛️◻️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️⬛️◻️◻️◻️⬛️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️"<<endl;
+            break;
+        case 3:
+            cout<<"⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️◻️⬛️⬛️⬛️◻️⬛️⬛️"<<endl;
+            cout<<"⬛️◻️◻️◻️⬛️◻️◻️◻️⬛️"<<endl;
+            cout<<"⬛️◻️◻️◻️◻️◻️◻️◻️⬛️"<<endl;
+            cout<<"⬛️◻️◻️◻️◻️◻️◻️◻️⬛️"<<endl;
+            cout<<"⬛️⬛️◻️◻️◻️◻️◻️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️⬛️◻️◻️◻️⬛️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️⬛️⬛️◻️⬛️⬛️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️"<<endl;
+            break;
+        case 4:
+            cout<<"⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️⬛️⬛️◻️⬛️⬛️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️⬛️⬛️◻️◻️⬛️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️⬛️⬛️◻️◻️◻️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️⬛️⬛️◻️◻️◻️◻️⬛️"<<endl;
+            cout<<"◻️◻️◻️◻️◻️◻️◻️◻️◻️"<<endl;
+            cout<<"⬛️◻️◻️◻️◻️◻️◻️◻️⬛️"<<endl;
+            cout<<"⬛️⬛️◻️◻️◻️◻️◻️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️⬛️"<<endl;
+            break;
+        case 5:
+            cout<<"⬛️⬛️⬛️⬛️◻️⬛️⬛️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️⬛️◻️◻️◻️⬛️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️◻️◻️◻️◻️◻️⬛️⬛️"<<endl;
+            cout<<"⬛️◻️◻️◻️◻️◻️◻️◻️⬛️"<<endl;
+            cout<<"⬛️⬛️◻️◻️◻️◻️◻️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️◻️◻️◻️◻️◻️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️◻️◻️⬛️◻️◻️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️◻️◻️⬛️◻️◻️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️◻️◻️⬛️◻️◻️⬛️⬛️"<<endl;
+            break;
+        case 6:
+            cout<<"⬛️⬛️⬛️⬛️◻️⬛️⬛️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️⬛️◻️◻️◻️⬛️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️⬛️◻️⬛️◻️⬛️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️⬛️◻️◻️◻️⬛️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️◻️◻️◻️◻️◻️⬛️⬛️"<<endl;
+            cout<<"⬛️◻️◻️◻️◻️◻️◻️◻️⬛️"<<endl;
+            cout<<"⬛️⬛️⬛️◻️◻️◻️⬛️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️⬛️◻️⬛️◻️⬛️⬛️⬛️"<<endl;
+            cout<<"⬛️⬛️◻️⬛️⬛️⬛️◻️⬛️⬛️"<<endl;
+            break;
+            
+        default:
+            cout<<"Worng number!"<<endl;
+            break;
+    }
+    
+}
+//--------------------------------------------
 int main() {
     char oprt;
     char ans;
@@ -289,6 +364,9 @@ int main() {
                 break;
             case '<':
                 downMatrix();
+                break;
+            case 'G':
+                Shape();
                 break;
             default:
                 cout << "You Choose Wrong" <<endl;
