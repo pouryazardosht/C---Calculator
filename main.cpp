@@ -43,10 +43,11 @@ void Division(){
 //--------------------------------------------
 void Remain(){
     cout <<"You Choose [%]"<<endl;
-    float a , b, remain;
+    int a , b;
+    float remain;
     cout<<"Enter Numbers: "<<endl;
     cin>>a>>b;
-    remain = a * b;
+    remain = a % b;
     cout<<a<<" % " << b << " = " <<remain<<endl;
 }
 //--------------------------------------------
@@ -166,7 +167,20 @@ void Average(){
     cout << "Average = " << avg;
 }
 //--------------------------------------------
-
+void mathGame(){
+    cout<<"You Choose [M]"<<endl;
+    int num1 = 1 + (rand() % 100) ,num2 = 1 + (rand() % 100);
+    int ans = num1 * num2,userAns;
+    cout<<num1<<" * "<<num2<<" = ? ";
+    cin>>userAns;
+    if (userAns == ans) {
+        cout<<"Good Job! "<<num1<<" * "<<num2<<" = "<<ans;
+    }
+    else {
+        cout<<"You choose wrong!"<<endl<<"The answer is : "<< num1<<" * "<< num2<<" = "<<ans;
+    }
+}
+//--------------------------------------------
 int main() {
     char oprt;
     char ans;
@@ -219,6 +233,9 @@ int main() {
                 break;
             case 'a':
                 Average();
+                break;
+            case 'M':
+                mathGame();
                 break;
             default:
                 cout << "You Choose Wrong" <<endl;
