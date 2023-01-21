@@ -13,6 +13,7 @@ void Menu(){
     cout <<"[+]" <<endl << "[-]" <<endl << "[/]" <<endl << "[%]" << endl<<"[*]" << endl<<"[S]" << endl<<"[$]" << endl<<"[e]" << endl<<"[#]" << endl<<"[p]" << endl<<"[l]" << endl<<"[f]" << endl<<"[v]" << endl<<"[^]" << endl<<"[<]"<< endl<<"[a]" <<endl<<"[M]" <<endl<<"[G]" <<endl;
     cout<< endl <<"Choose: ";
 }
+//--------------------------------------------
 void Sum(){
     cout <<"You Choose [+]"<<endl;
     float a , b, sum;
@@ -21,6 +22,7 @@ void Sum(){
     sum = a + b;
     cout<<a<<" + " << b << " = " <<sum<<endl;
 }
+//--------------------------------------------
 void Minus(){
     cout <<"You Choose [-]"<<endl;
     float a , b, minus;
@@ -29,6 +31,7 @@ void Minus(){
     minus = a - b;
     cout<<a<<" - " << b << " = " <<minus<<endl;
 }
+//--------------------------------------------
 void Division(){
     cout <<"You Choose [/]"<<endl;
     float a , b, division;
@@ -37,14 +40,17 @@ void Division(){
     division = a / b;
     cout<<a<<" / " << b << " = " <<division<<endl;
 }
+//--------------------------------------------
 void Remain(){
     cout <<"You Choose [%]"<<endl;
-    float a , b, remain;
+    int a , b;
+    float remain;
     cout<<"Enter Numbers: "<<endl;
     cin>>a>>b;
-    remain = a * b;
+    remain = a % b;
     cout<<a<<" % " << b << " = " <<remain<<endl;
 }
+//--------------------------------------------
 void Multipli(){
     cout <<"You Choose [*]"<<endl;
     float a , b, multi;
@@ -53,6 +59,7 @@ void Multipli(){
     multi = a * b;
     cout<<a<<" * " << b << " = " <<multi<<endl;
 }
+//--------------------------------------------
 void Square(){
     cout <<"You Choose [S]"<<endl;
     float a,S;
@@ -61,6 +68,7 @@ void Square(){
     S = sqrt(a);
     cout<<"The Square of "<<a<<" is "<<S<<endl;
 }
+//--------------------------------------------
 void Sinus(){
     cout <<"You Choose [$]"<<endl;
     float a,sinus;
@@ -69,6 +77,7 @@ void Sinus(){
     sinus = sin(a);
     cout<<"The sinus of "<<a<<" is "<<sinus<<endl;
 }
+//--------------------------------------------
 void Exponential(){
     cout <<"You Choose [e]"<<endl;
     float a,exponential;
@@ -77,6 +86,7 @@ void Exponential(){
     exponential = exp(a);
     cout<<"The exponential of "<<a<<" is "<<exponential<<endl;
 }
+//--------------------------------------------
 void Cosine(){
     cout <<"You Choose [#]"<<endl;
     double a,cosine;
@@ -85,6 +95,7 @@ void Cosine(){
     cosine = cos(a);
     cout<<"The cosine of "<<a<<" is "<<cosine<<endl;
 }
+//--------------------------------------------
 void Power(){
     cout <<"You Choose [p]"<<endl;
     double a,b,power;
@@ -94,6 +105,7 @@ void Power(){
     cout<<a<<" to the power of "<<b<< " becomes "<<power<<endl;
     
 }
+//--------------------------------------------
 void Logarithm(){
     cout <<"You Choose [l]"<<endl;
     double a,log;
@@ -102,37 +114,73 @@ void Logarithm(){
     log = log10(a);
     cout<<"log "<<a<<" is "<<log<<endl;
 }
+//--------------------------------------------
 void Factorial(){
     cout<<"You Choose [f]"<<endl;
     int fact = 1,a;
-            cout<<"Enter A Number: "<<endl;
-            cin>>a;
-        for (int i = 1; i <= a; i++){
-            fact *= i;
-        }
-        cout<<"Factorial: "<<fact;
+    cout<<"Enter A Number: "<<endl;
+    cin>>a;
+    for (int i = 1; i <= a; i++){
+        fact *= i;
+    }
+    cout<<"Factorial: "<<fact;
 }
-//void Average(){
-//    cout<<"You Choose [a]"<<endl;
-//    int n;
-//    float num[100], sum=0, avg;
-//    cout << "Enter count of numbers: ";
-//    cin >> n;
-//    while (n > 100 || n <= 0)
-//    {
-//        cout << "Error! number should in range of (1 to 100)." << endl;
-//        cout << "Enter the number again: ";
-//        cin >> n;
-//    }
-//        for(int i = 0; i < n; ++i)
-//        {
-//            cout << i + 1 << ". Enter number: ";
-//            cin >> num[i];
-//            sum += num[i];
-//        }
-//        avg = sum / n;
-//        cout << "Average = " << avg;
-//}
+//--------------------------------------------
+void Variance(){
+    cout <<"You Choose [v]"<<endl;
+    int n;
+    float avg,sum = 0,t,var;
+    cout <<"Enter num count: "<<endl;
+    cin>>n;
+    int a[n];
+    for(int i = 0; i < n; i++){
+        cout <<"Enter num: ";
+        cin>>a[i];
+        sum +=a[i];
+    }
+    avg = sum/n;
+    sum = 0.0;
+    
+    for(int i =0 ; i<n ; i++){
+        t=a[i]-avg;
+        t=pow(t,2);
+        sum=sum+t;
+    }
+    var=sum/n;
+    cout<<endl<<"Variance is : "<<var<<endl;
+    
+}
+//--------------------------------------------
+void Average(){
+    cout<<"You Choose [a]"<<endl;
+    int n;
+    float  sum=0, avg;
+    cout <<"Enter num count: "<<endl;
+    cin>>n;
+    int a[n];
+    for(int i = 0; i < n; i++){
+        cout <<"Enter num: ";
+        cin>>a[i];
+        sum +=a[i];
+    }
+    avg = sum/n;
+    cout << "Average = " << avg;
+}
+//--------------------------------------------
+void mathGame(){
+    cout<<"You Choose [M]"<<endl;
+    int num1 = 1 + (rand() % 100) ,num2 = 1 + (rand() % 100);
+    int ans = num1 * num2,userAns;
+    cout<<num1<<" * "<<num2<<" = ? ";
+    cin>>userAns;
+    if (userAns == ans) {
+        cout<<"Good Job! "<<num1<<" * "<<num2<<" = "<<ans;
+    }
+    else {
+        cout<<"You choose wrong!"<<endl<<"The answer is : "<< num1<<" * "<< num2<<" = "<<ans;
+    }
+}
+//--------------------------------------------
 int main() {
     char oprt;
     char ans;
@@ -180,9 +228,15 @@ int main() {
             case 'f':
                 Factorial();
                 break;
-//            case 'a':
-//                Average();
-//                break;
+            case 'v':
+                Variance();
+                break;
+            case 'a':
+                Average();
+                break;
+            case 'M':
+                mathGame();
+                break;
             default:
                 cout << "You Choose Wrong" <<endl;
                 break;
