@@ -117,12 +117,12 @@ void Logarithm(){
 void Factorial(){
     cout<<"You Choose [f]"<<endl;
     int fact = 1,a;
-            cout<<"Enter A Number: "<<endl;
-            cin>>a;
-        for (int i = 1; i <= a; i++){
-            fact *= i;
-        }
-        cout<<"Factorial: "<<fact;
+    cout<<"Enter A Number: "<<endl;
+    cin>>a;
+    for (int i = 1; i <= a; i++){
+        fact *= i;
+    }
+    cout<<"Factorial: "<<fact;
 }
 //--------------------------------------------
 void Variance(){
@@ -150,28 +150,21 @@ void Variance(){
     
 }
 //--------------------------------------------
-
-//void Average(){
-//    cout<<"You Choose [a]"<<endl;
-//    int n;
-//    float num[100], sum=0, avg;
-//    cout << "Enter count of numbers: ";
-//    cin >> n;
-//    while (n > 100 || n <= 0)
-//    {
-//        cout << "Error! number should in range of (1 to 100)." << endl;
-//        cout << "Enter the number again: ";
-//        cin >> n;
-//    }
-//        for(int i = 0; i < n; ++i)
-//        {
-//            cout << i + 1 << ". Enter number: ";
-//            cin >> num[i];
-//            sum += num[i];
-//        }
-//        avg = sum / n;
-//        cout << "Average = " << avg;
-//}
+void Average(){
+    cout<<"You Choose [a]"<<endl;
+    int n;
+    float  sum=0, avg;
+    cout <<"Enter num count: "<<endl;
+    cin>>n;
+    int a[n];
+    for(int i = 0; i < n; i++){
+        cout <<"Enter num: ";
+        cin>>a[i];
+        sum +=a[i];
+    }
+    avg = sum/n;
+    cout << "Average = " << avg;
+}
 //--------------------------------------------
 
 int main() {
@@ -224,9 +217,9 @@ int main() {
             case 'v':
                 Variance();
                 break;
-//            case 'a':
-//                Average();
-//                break;
+            case 'a':
+                Average();
+                break;
             default:
                 cout << "You Choose Wrong" <<endl;
                 break;
